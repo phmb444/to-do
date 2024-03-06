@@ -112,7 +112,3 @@ function editarNota (index) {
                 localStorage.setItem("notas", JSON.stringify(notas));
         }
 }
-
-
-
-
