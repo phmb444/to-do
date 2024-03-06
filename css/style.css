@@ -15,3 +15,16 @@ body {
 span img:hover {
     cursor: pointer;
 }
+
+.modal{
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Keep it positioned at the same place in the page */
+    z-index: 1; /* Make sure it's on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Make it fill the entire viewport */
+    height: 100%; /* Make it cover the entire viewport */
+    overflow: auto; /* Enable scrolling if the content overflows */
+    background-color: rgba(114, 114, 114, 0.848); /* Add a semi-transparent background */
+    padding: 5% 30%;
+}
