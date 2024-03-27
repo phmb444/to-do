@@ -53,7 +53,7 @@ function mostrarNotas() {
                     <div id="${index}" class="w-full h-24 mb-4 py-2 border-b-2 border-gray-200">
                             <span class="flex justify-between">
                                     <h2 class="text-xl p-1">${nota.titulo}</h2>
-                                    <p class="text-xl">${nota.data}</p>
+                                    <p class="text-sm" id="data">Ultima edição: ${nota.data}</p>
                             </span>
                             <section class="flex mt-4">
                                     <p class="text-sm w-5/6 p-1" id="texto">${nota.texto}</p>
@@ -106,7 +106,10 @@ function editarNota (index) {
                 console.log("caneta")
                 edit.src = "/static/caneta.svg";
                 notas[index].titulo = tituloElement.innerText;
-                notas[index].texto = textoElement.innerText;    
+                notas[index].texto = textoElement.innerText;
+                notas[index].data = new Date().toLocaleDateString();
+                let dataElement = notaElement.querySelector("#data");
+                dataElement.innerHTML = notas[index].data;
                 tituloElement.contentEditable = false;
                 textoElement.contentEditable = false;
                 localStorage.setItem("notas", JSON.stringify(notas));
