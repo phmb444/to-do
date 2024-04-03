@@ -91,6 +91,8 @@ function editarNota (index) {
         edit.src = "/static/save.svg";
         tituloElement.contentEditable = true;
         textoElement.contentEditable = true;
+        tituloElement.style.border = "1px solid black";
+        textoElement.style.border = "1px solid black";
 
         tituloElement.addEventListener("blur", function () {
                 nota.titulo = tituloElement.innerText;
