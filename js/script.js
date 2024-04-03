@@ -115,5 +115,7 @@ function editarNota (index) {
                 tituloElement.contentEditable = false;
                 textoElement.contentEditable = false;
                 localStorage.setItem("notas", JSON.stringify(notas));
+                tituloElement.style.border = "none";
+                textoElement.style.border = "none";
         }
 }
